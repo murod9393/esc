@@ -262,11 +262,84 @@ public class GreenCardFactroy {
 	WebElement child1ChoosePhotoBtn;
 	
 	
-//	@FindBy(xpath = "")
-//	WebElement
-//	
-//	@FindBy(xpath = "")
-//	WebElement
+	// child2
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild02:qName:txtLastName']")
+	WebElement child2LastNameBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild02:qName:txtFirstName']")
+	WebElement child2FirstNameBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild02:qName:txtMiddleName']")
+	WebElement child2MiddleNameBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild02:qName:cbxMiddleName']")
+	WebElement child2NoMiddleNameCheckBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild02:qBirthDate:txtMonthOfBirth']")
+	WebElement child2BirthMonthBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild02:qBirthDate:txtDayOfBirth']")
+	WebElement child2BirthDayBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild02:qBirthDate:txtYearOfBirth']")
+	WebElement child2BirthYearBox;
+	
+	@FindBy(xpath = "(//input[@name='_ctl0:ContentPlaceHolder1:formChild02:qGender:grpGender'])[1]")
+	WebElement child2GenderMaleCheckBox;
+	
+	@FindBy(xpath = "(//input[@name='_ctl0:ContentPlaceHolder1:formChild02:qGender:grpGender'])[2]")
+	WebElement child2GenderFemaleCheckBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild02:qBirthCity:txtBirthCity']")
+	WebElement child2BirthCityBox;
+	
+	@FindBy(xpath = "//select[@name='_ctl0:ContentPlaceHolder1:formChild02:qBirthCountry:drpBirthCountry']")
+	WebElement child2BirthCountryBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild02:qPhotograph:btnPhotoBox']")
+	WebElement child2ChoosePhotoBtn;
+	
+	
+	
+	// child3
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild03:qName:txtLastName']")
+	WebElement child3LastNameBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild03:qName:txtFirstName']")
+	WebElement child3FirstNameBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild03:qName:txtMiddleName']")
+	WebElement child3MiddleNameBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild03:qName:cbxMiddleName']")
+	WebElement child3NoMiddleNameCheckBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild03:qBirthDate:txtMonthOfBirth']")
+	WebElement child3BirthMonthBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild03:qBirthDate:txtDayOfBirth']")
+	WebElement child3BirthDayBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild03:qBirthDate:txtYearOfBirth']")
+	WebElement child3BirthYearBox;
+	
+	@FindBy(xpath = "(//input[@name='_ctl0:ContentPlaceHolder1:formChild03:qGender:grpGender'])[1]")
+	WebElement child3GenderMaleCheckBox;
+	
+	@FindBy(xpath = "(//input[@name='_ctl0:ContentPlaceHolder1:formChild03:qGender:grpGender'])[2]")
+	WebElement child3GenderFemaleCheckBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild03:qBirthCity:txtBirthCity']")
+	WebElement child3BirthCityBox;
+	
+	@FindBy(xpath = "//select[@name='_ctl0:ContentPlaceHolder1:formChild03:qBirthCountry:drpBirthCountry']")
+	WebElement child3BirthCountryBox;
+	
+	@FindBy(xpath = "//input[@name='_ctl0:ContentPlaceHolder1:formChild03:qPhotograph:btnPhotoBox']")
+	WebElement child3ChoosePhotoBtn;
+	
 	
 	public GreenCardFactroy(WebDriver driver ) {
 		this.driver = driver;
@@ -519,9 +592,88 @@ public class GreenCardFactroy {
 	}
 	
 	
+	// for child2 
+	
+	public void enterChild2LastName(String lastname) {
+		child2LastNameBox.sendKeys(lastname);
+	}
+	
+	public void enterChild2FirstName(String firstname) {
+		child2FirstNameBox.sendKeys(firstname);
+	}
+	
+	public void enterChild2MiddleName(String middlename) {
+		if(middlename.equals("null")) {
+			child2NoMiddleNameCheckBox.click();
+		}else {
+			child2MiddleNameBox.sendKeys(middlename);
+		}
+	}
+	
+	public void enterChild2BirthData(String month, String day, String year) {
+		child2BirthMonthBox.sendKeys(month);
+		child2BirthDayBox.sendKeys(day);
+		child2BirthYearBox.sendKeys(year);
+	}
+	
+	public void selectGenderChild2(String gender) {
+		if(gender.equals("male")) {
+			child2GenderMaleCheckBox.click();
+		}else {
+			child2GenderFemaleCheckBox.click();
+		}
+	}
+	
+	public void enterCityChild2Born(String city) {
+		child2BirthCityBox.sendKeys(city);
+	}
+
+	public void enterCountryChild2Born(String country) {
+		child2BirthCountryBox.sendKeys(country);
+	}
 	
 	
 	
+	// child 3 
+	
+	
+	public void enterChild3LastName(String lastname) {
+		child3LastNameBox.sendKeys(lastname);
+	}
+	
+	public void enterChild3FirstName(String firstname) {
+		child3FirstNameBox.sendKeys(firstname);
+	}
+	
+	public void enterChild3MiddleName(String middlename) {
+		if(middlename.equals("null")) {
+			child3NoMiddleNameCheckBox.click();
+		}else {
+			child3MiddleNameBox.sendKeys(middlename);
+		}
+	}
+	
+	public void enterChild3BirthData(String month, String day, String year) {
+		child3BirthMonthBox.sendKeys(month);
+		child3BirthDayBox.sendKeys(day);
+		child3BirthYearBox.sendKeys(year);
+	}
+	
+	public void selectGenderChild3(String gender) {
+		if(gender.equals("male")) {
+			child3GenderMaleCheckBox.click();
+		}else {
+			child3GenderFemaleCheckBox.click();
+		}
+	}
+	
+	public void enterCityChild3Born(String city) {
+		child3BirthCityBox.sendKeys(city);
+	}
+
+	public void enterCountryChild3Born(String country) {
+		child3BirthCountryBox.sendKeys(country);
+	}
 	
 	
 	

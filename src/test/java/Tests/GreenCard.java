@@ -85,41 +85,66 @@ public class GreenCard extends Base {
 		
 		int numOfChild = Integer.parseInt(prop.getProperty("numOfChild"));
 		
-		GreenCard gc = new GreenCard();
-		
-		if(numOfChild==1) {
-			gc.child1();
-		}else {
-		System.out.println("error in if statement!!!");
+		for(int i=1; i<=numOfChild; i++) {
+			switch(i) {
+			case 1:
+				gr.enterChild1LastName(prop.getProperty("child1LastName"));
+				
+				gr.enterChild1FirstName(prop.getProperty("child1FirstName"));
+				
+				gr.enterChild1MiddleName(prop.getProperty("child1MiddleName"));
+				
+				gr.enterChild1BirthData(prop.getProperty("child1BirthMonth"), prop.getProperty("child1BirthDay"), prop.getProperty("child1BirthYear"));
+				
+				gr.selectGenderChild1(prop.getProperty("child1Gender"));
+				
+				gr.enterCityChild1Born(prop.getProperty("City.Where.Child1.Was.Born"));
+				
+				gr.enterCountryChild1Born(prop.getProperty("Country.Where.Child1.Was.Born"));
+				break;
+			case 2:
+				
+				gr.enterChild2LastName(prop.getProperty("child2LastName"));
+				
+				gr.enterChild2FirstName(prop.getProperty("child2FirstName"));
+				
+				gr.enterChild2MiddleName(prop.getProperty("child2MiddleName"));
+				
+				gr.enterChild2BirthData(prop.getProperty("child2BirthMonth"), prop.getProperty("child1BirthDay"), prop.getProperty("child1BirthYear"));
+				
+				gr.selectGenderChild2(prop.getProperty("child2Gender"));
+				
+				gr.enterCityChild2Born(prop.getProperty("City.Where.Child2.Was.Born"));
+				
+				gr.enterCountryChild2Born(prop.getProperty("Country.Where.Child2.Was.Born"));
+				System.out.println("for child 2");
+				break;
+				
+			case 3:
+				
+gr.enterChild2LastName(prop.getProperty("child2LastName"));
+				
+				gr.enterChild3FirstName(prop.getProperty("child3FirstName"));
+				
+				gr.enterChild3MiddleName(prop.getProperty("child3MiddleName"));
+				
+				gr.enterChild3BirthData(prop.getProperty("child3BirthMonth"), prop.getProperty("child1BirthDay"), prop.getProperty("child1BirthYear"));
+				
+				gr.selectGenderChild3(prop.getProperty("child3Gender"));
+				
+				gr.enterCityChild3Born(prop.getProperty("City.Where.Child3.Was.Born"));
+				
+				gr.enterCountryChild3Born(prop.getProperty("Country.Where.Child3.Was.Born"));
+				System.out.println("for child 3");
+				break;
+			case 4:
+				System.out.println("for child 4");
+				break;
+			}
 		}
 		
 	}
 
-		
-		
-		
-		
-		
-	
-	
-	public void child1() {
-		 
-		gr.enterChild1LastName(prop.getProperty("child1LastName"));
-		
-		gr.enterChild1FirstName(prop.getProperty("child1FirstName"));
-		
-		gr.enterChild1MiddleName(prop.getProperty("child1MiddleName"));
-		
-		gr.enterChild1BirthData(prop.getProperty("child1BirthMonth"), prop.getProperty("child1BirthDay"), prop.getProperty("child1BirthYear"));
-		
-		gr.selectGenderChild1(prop.getProperty("child1Gender"));
-		
-		gr.enterCityChild1Born(prop.getProperty("City.Where.Child1.Was.Born"));
-		
-		gr.enterCountryChild1Born(prop.getProperty("Country.Where.Child.Was.Born"));
-		
-	}
-	
 	
 
 }
