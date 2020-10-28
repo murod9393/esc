@@ -122,7 +122,7 @@ public class GreenCard extends Base {
 				
 			case 3:
 				
-gr.enterChild2LastName(prop.getProperty("child2LastName"));
+				gr.enterChild3LastName(prop.getProperty("child3LastName"));
 				
 				gr.enterChild3FirstName(prop.getProperty("child3FirstName"));
 				
