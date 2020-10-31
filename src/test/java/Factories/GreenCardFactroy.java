@@ -491,15 +491,15 @@ public class GreenCardFactroy {
 	}
 	
 	public void selectMartialStatus(String status) {
-		if(status.equals("Unmarried")) {
+		if(status.equalsIgnoreCase("Unmarried")) {
 			unmarriedCheckBox.click();
-		}else if(status.equals("marriedMySpouseNotUSAcitizen")) {
+		}else if(status.equalsIgnoreCase("marriedMySpouseNotUSAcitizen")) {
 			marriedSpouseNOTUSACitizenCheckBox.click();
-		}else if(status.equals("marriedMySpouseUSAcitizen")) {
+		}else if(status.equalsIgnoreCase("marriedMySpouseUSAcitizen")) {
 			marriedSpouseUSACitizenCheckBox.click();
-		}else if(status.equals("Divorced")) {
+		}else if(status.equalsIgnoreCase("Divorced")) {
 			divorcedCheckBox.click();
-		}else if(status.equals("Widowed")) {
+		}else if(status.equalsIgnoreCase("Widowed")) {
 			widowedCheckBox.click();
 		}else {
 			legallySperatedCheckBox.click();
@@ -516,7 +516,7 @@ public class GreenCardFactroy {
 	
 	
 	// Spouse 
-	
+
 	public void spouseName(String firstName, String lastName,String middleName) {
 		spouseFirstNameBox.sendKeys(firstName);
 		spouseLastNameBox.sendKeys(lastName);
