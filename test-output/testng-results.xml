@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23353" started-at="2020-10-28T22:18:52Z" finished-at="2020-10-28T22:19:16Z">
+  <suite name="Default suite" duration-ms="28924" started-at="2020-10-31T14:49:54Z" finished-at="2020-10-31T14:50:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23353" started-at="2020-10-28T22:18:52Z" finished-at="2020-10-28T22:19:16Z">
+    <test name="Default test" duration-ms="28924" started-at="2020-10-31T14:49:54Z" finished-at="2020-10-31T14:50:23Z">
       <class name="Tests.GreenCard">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Tests.GreenCard@6ce139a4]" name="setUp" is-config="true" duration-ms="6652" started-at="2020-10-28T22:18:52Z" finished-at="2020-10-28T22:18:59Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Tests.GreenCard@43301423]" name="setUp" is-config="true" duration-ms="7396" started-at="2020-10-31T14:49:54Z" finished-at="2020-10-31T14:50:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="registrTo()[pri:0, instance:Tests.GreenCard@6ce139a4]" name="registrTo" duration-ms="16685" started-at="2020-10-28T22:18:59Z" finished-at="2020-10-28T22:19:16Z">
+        <test-method status="PASS" signature="registrTo()[pri:0, instance:Tests.GreenCard@43301423]" name="registrTo" duration-ms="21466" started-at="2020-10-31T14:50:01Z" finished-at="2020-10-31T14:50:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registrTo -->

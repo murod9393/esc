@@ -58,6 +58,7 @@ public class GreenCard extends Base {
 		
 		gr.enterCountryWhereYouLive(prop.getProperty("CountryWhereYouLive"));
 		
+		
 		gr.enterPhoneNum(prop.getProperty("phoneNum"));
 		
 		gr.enterEmail(prop.getProperty("email"));
@@ -66,8 +67,11 @@ public class GreenCard extends Base {
 		
 		gr.selectMartialStatus(prop.getProperty("martialStatus"));
 		
+		if(prop.getProperty("martialStatus").equalsIgnoreCase("unmarried")) {
+			gr.enterChildNum("0");
+		}else {
 		gr.enterChildNum(prop.getProperty("numOfChild"));
-		
+		}
 		
 		// for spouse
 		
@@ -88,6 +92,7 @@ public class GreenCard extends Base {
 		for(int i=1; i<=numOfChild; i++) {
 			switch(i) {
 			case 1:
+				//child 1
 				gr.enterChild1LastName(prop.getProperty("child1LastName"));
 				
 				gr.enterChild1FirstName(prop.getProperty("child1FirstName"));
@@ -104,38 +109,40 @@ public class GreenCard extends Base {
 				break;
 			case 2:
 				
+				//child 2
 				gr.enterChild2LastName(prop.getProperty("child2LastName"));
 				
 				gr.enterChild2FirstName(prop.getProperty("child2FirstName"));
 				
 				gr.enterChild2MiddleName(prop.getProperty("child2MiddleName"));
 				
-				gr.enterChild2BirthData(prop.getProperty("child2BirthMonth"), prop.getProperty("child1BirthDay"), prop.getProperty("child1BirthYear"));
+				gr.enterChild2BirthData(prop.getProperty("child2BirthMonth"), prop.getProperty("child2BirthDay"), prop.getProperty("child2BirthYear"));
 				
 				gr.selectGenderChild2(prop.getProperty("child2Gender"));
 				
 				gr.enterCityChild2Born(prop.getProperty("City.Where.Child2.Was.Born"));
 				
 				gr.enterCountryChild2Born(prop.getProperty("Country.Where.Child2.Was.Born"));
-				System.out.println("for child 2");
+				
 				break;
 				
 			case 3:
 				
+				//child 3
 				gr.enterChild3LastName(prop.getProperty("child3LastName"));
 				
 				gr.enterChild3FirstName(prop.getProperty("child3FirstName"));
 				
 				gr.enterChild3MiddleName(prop.getProperty("child3MiddleName"));
 				
-				gr.enterChild3BirthData(prop.getProperty("child3BirthMonth"), prop.getProperty("child1BirthDay"), prop.getProperty("child1BirthYear"));
+				gr.enterChild3BirthData(prop.getProperty("child3BirthMonth"), prop.getProperty("child3BirthDay"), prop.getProperty("child3BirthYear"));
 				
 				gr.selectGenderChild3(prop.getProperty("child3Gender"));
 				
 				gr.enterCityChild3Born(prop.getProperty("City.Where.Child3.Was.Born"));
 				
 				gr.enterCountryChild3Born(prop.getProperty("Country.Where.Child3.Was.Born"));
-				System.out.println("for child 3");
+				
 				break;
 			case 4:
 				System.out.println("for child 4");

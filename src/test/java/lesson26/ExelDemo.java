@@ -8,29 +8,20 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExelDemo {
 
-	public static void main(String[] args) {
-		XSSFWorkbook excelWorkBook;
-		XSSFSheet excelSheet;
-		XSSFCell cell;
+	
 		
-		//C:\\Users\\Murod\\Desktop\\TestData.xlsx
+		 //C:\\Users\\Murod\\Desktop\\TestData.xlsx           src\\test\\java\\lesson26\\TestData.xlsx
 		
-		String path = "src\\test\\java\\lesson26\\TestData.xlsx";
-		String sheetName = "Sheet1";
-
-		try {
-			FileInputStream fis = new FileInputStream(path);
-			excelWorkBook = new XSSFWorkbook(fis);
-			excelSheet = excelWorkBook.getSheet(sheetName);
-			cell = excelSheet.getRow(7).getCell(1);
-			String cellData = cell.getStringCellValue();
-			System.out.println("Cell Data: " + cellData);
+		static String path = "C:\\Users\\Murod\\Desktop\\TestData.xlsx";
+		static String sheetName = "Sheet1";
+		
+		public static void main(String[] args) {
+			
+			ExcelUtility.setExcelFile(path, sheetName);
 			
 			
 			
-		}catch(Exception e) {
-			e.getMessage();
 		}
-	}
+	
 
 }
