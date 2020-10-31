@@ -40,7 +40,7 @@ public class GreenCard extends Base {
 		
 		gr.selectCountry(prop.getProperty("CountryYouBorn"));
 		
-		gr.fillUpPasswordInfo(prop.getProperty("passLast"), prop.getProperty("passFirst"), prop.getProperty("passNum"), prop.getProperty("exMonth"), prop.getProperty("exDay"), prop.getProperty("exYear"), prop.getProperty("authorityCountry"));
+		gr.fillUpPasswordInfo(prop.getProperty("passFirst"), prop.getProperty("passLast"), prop.getProperty("passNum"), prop.getProperty("exMonth"), prop.getProperty("exDay"), prop.getProperty("exYear"), prop.getProperty("authorityCountry"));
 		
 		gr.choosePhoto();
 		
